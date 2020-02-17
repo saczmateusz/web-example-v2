@@ -1,4 +1,5 @@
 <!doctype html>
+<?php ?>
 <html lang="pl">
 <head>
     <meta charset="utf-8">

@@ -25,5 +25,14 @@
         "description": "bezchmurnie",
         "id": 1963591,
         "icon": "01d"
+    },
+    {
+        "name": "Sandomierz",
+        "temperature": "15",
+        "humidity": "95",
+        "wind": "0.5",
+        "description": "deszcz",
+        "id": 1700406,
+        "icon": "10d"
     }
 ]

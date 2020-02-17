@@ -9,6 +9,7 @@ $city = [
     'humidity' => '',
     'wind' => '',
     'description' => '',
+    'icon' => '',
 ];
 
 $errors = [

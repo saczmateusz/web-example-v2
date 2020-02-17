@@ -21,7 +21,7 @@ function createCity($data)
     $cities = getCities();
 
     $data['id'] = rand(1000000, 2000000);
-
+    $data['icon'] = addIcon($data['description']);
     $cities[] = $data;
 
     putJson($cities);
@@ -31,6 +31,7 @@ function createCity($data)
 
 function updateCity($data, $id)
 {
+    $data['icon'] = addIcon($data['description']);
     $updatecity = [];
     $cities = getCities();
     foreach ($cities as $i => $city) {
@@ -84,4 +85,26 @@ function validateCity($city, &$errors)
     }
 
     return $isValid;
+}
+
+function addIcon($description)
+{
+    switch ($description) {
+        case "bezchmurnie":
+            return "01d";
+        case "rozproszone chmury":
+            return "02d";
+        case "całkowite zachmurzenie":
+            return "04d";
+        case "deszcz":
+            return "10d";
+        case "ulewa":
+            return "09d";
+        case "śnieg":
+            return "13d";
+        case "mgła":
+            return "50d";
+        case "burza z piorunami":
+            return "11d";
+    }
 }
