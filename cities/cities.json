@@ -1,0 +1,29 @@
+[
+    {
+        "id": 1,
+        "name": "Rzesz\u00f3w",
+        "temperature": "7.2",
+        "humidity": 66,
+        "wind": "7.7",
+        "description": "ca\u0142kowite zachmurzenie",
+        "icon": "04d"
+    },
+    {
+        "id": 1476850,
+        "name": "Warszawa",
+        "temperature": "6.9",
+        "humidity": "45",
+        "wind": "8.7",
+        "description": "rozproszone chmury",
+        "icon": "04d"
+    },
+    {
+        "name": "Pozna\u0144",
+        "temperature": "2.3",
+        "humidity": "24",
+        "wind": "3",
+        "description": "bezchmurnie",
+        "id": 1963591,
+        "icon": "01d"
+    }
+]
