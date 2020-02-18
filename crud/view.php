@@ -1,6 +1,6 @@
 <?php
 include 'components/header.php';
-require __DIR__ . '/cities/cities.php';
+require '../cities/cities.php';
 
 if (!isset($_GET['id'])) {
     include "components/not_found.php";

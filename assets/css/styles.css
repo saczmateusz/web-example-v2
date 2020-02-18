@@ -20,7 +20,7 @@ body {
   flex-direction: column;
 }
 h1 {
-  font-family: "Segoe UI", Arial, sans-serif;
+  font-family: 'Segoe UI', Arial, sans-serif;
   font-weight: 400;
   margin: 10px 0;
   font-size: 24px;
@@ -95,6 +95,9 @@ footer .button {
   position: relative;
   margin: 10px 0;
   width: 330px;
+}
+.searchbar {
+  margin: 0;
 }
 .form-input {
   width: 75%;

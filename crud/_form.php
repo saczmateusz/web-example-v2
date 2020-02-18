@@ -32,7 +32,7 @@
                 <div class="form-group">
                     <label>Wilgotność</label>
                     <input name="humidity" value="<?php echo $city['humidity'] ?>"
-                           class="form-control  <?php echo $errors['humidity'] ? 'is-invalid' : '' ?>">
+                            class="form-control  <?php echo $errors['humidity'] ? 'is-invalid' : '' ?>">
                     <div class="invalid-feedback">
                         <?php echo $errors['humidity'] ?>
                     </div>
@@ -40,21 +40,40 @@
                 <div class="form-group">
                     <label>Wiatr</label>
                     <input name="wind" value="<?php echo $city['wind'] ?>"
-                           class="form-control  <?php echo $errors['wind'] ? 'is-invalid' : '' ?>">
+                            class="form-control  <?php echo $errors['wind'] ? 'is-invalid' : '' ?>">
                     <div class="invalid-feedback">
                         <?php echo $errors['wind'] ?>
                     </div>
                 </div>
                 <div class="form-group">
                     <label>Opis</label>
-                    <input name="description" value="<?php echo $city['description'] ?>"
-                           class="form-control  <?php echo $errors['description'] ? 'is-invalid' : '' ?>">
-                    <div class="invalid-feedback">
+
+
+                    <input name="description" list="description" value="<?php echo $city['description'] ?>"
+                            class="form-control  <?php echo $errors['description'] ? 'is-invalid' : '' ?>">
+                    <datalist id="description">
+                        <option value="bezchmurnie">
+                        <option value="rozproszone chmury">
+                        <option value="całkowite zachmurzenie">
+                        <option value="deszcz">
+                        <option value="ulewa">
+                        <option value="śnieg">
+                        <option value="mgła">
+                        <option value="burza z piorunami">
+                    </datalist>
+
+                           <div class="invalid-feedback">
                         <?php echo $errors['description'] ?>
                     </div>
                 </div>
 
-                <button class="btn btn-success">Dodaj</button>
+                <button class="btn btn-success">
+                    <?php if ($city['id']): ?>
+                        Zapisz
+                    <?php else: ?>
+                        Dodaj
+                    <?php endif?>
+                </button>
             </form>
         </div>
     </div>

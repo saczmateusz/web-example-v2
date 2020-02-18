@@ -1,6 +1,6 @@
 <?php
 include 'components/header.php';
-require __DIR__ . '/cities/cities.php';
+require '../cities/cities.php';
 
 $city = [
     'id' => '',
@@ -29,7 +29,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if ($isValid) {
         $city = createCity($_POST);
 
-        header("Location: index.php");
+        header("Location: ../admin/admin-dashboard.php");
     }
 }
 

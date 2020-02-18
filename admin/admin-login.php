@@ -4,9 +4,9 @@ session_start();
 $msg = '';
 
 if (isset($_SESSION['admin'])) {
-    // header('Location: admin-dashboard.php');
-    // die();
-    die("Administrator jest już zalogowany");
+    header('Location: admin-dashboard.php');
+    die();
+    // die("Administrator jest już zalogowany");
 }
 
 if (isset($_POST['submit'])) {
@@ -23,8 +23,8 @@ if (isset($_POST['submit'])) {
 <html>
 <head>
     <title>Admin Login</title>
-    <link rel="shortcut icon" type="image/png" href="assets/img/favicon.png" />
-    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="shortcut icon" type="image/png" href="../assets/img/favicon.png" />
+    <link rel="stylesheet" href="../assets/css/styles.css" />
 </head>
 <body>
     <header>
@@ -75,24 +75,10 @@ if (isset($_POST['submit'])) {
     </footer>
 
     <div class="loading">
-      <img src="assets/img/planet.svg" />
+      <img src="../assets/img/planet.svg" />
     </div>
 
-    <script src="assets/js/script.js"></script>
+    <script src="../assets/js/script.js"></script>
   </body>
 
-<!-- <body>
-
-    <div>
-        <form method="POST">
-            Login: <input type="text" name="login"> <br>
-            Password: <input type="password" name="password"> <br>
-            <button name="submit"> Login </button>
-        </form>
-
-        <?php if ($msg): ?>
-            <p> <?php echo $msg; ?> </p>
-        <?php endif;?>
-    </div>
-</body> -->
 </html>
