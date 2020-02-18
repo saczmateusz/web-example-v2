@@ -87,7 +87,7 @@ footer {
 .button:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-footer .button {
+.red-button {
   background-color: #be4646;
   height: 31px;
 }
@@ -199,4 +199,11 @@ i:hover {
 .login-form {
   display: flex;
   flex-direction: column;
+}
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
 }
