@@ -1,5 +1,4 @@
 <?php
-include 'components/header.php';
 require '../cities/cities.php';
 
 if (!isset($_GET['id'])) {
@@ -35,4 +34,23 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 ?>
 
-<?php include '_form.php'?>
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+  <title>Pogoda</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="shortcut icon" type="image/png" href="../assets/img/favicon.png" />
+  <link rel="stylesheet" href="../assets/css/styles.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" />
+</head>
+
+<body>
+  <header>
+    <div class="header-title">
+      <h1 class="animate-left">Panel administratora</h1>
+    </div>
+  </header>
+
+  <?php include '_form.php'?>
