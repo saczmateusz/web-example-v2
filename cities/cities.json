@@ -9,15 +9,6 @@
         "icon": "04d"
     },
     {
-        "id": 1476850,
-        "name": "Warszawa",
-        "temperature": "6.9",
-        "humidity": "45",
-        "wind": "8.7",
-        "description": "rozproszone chmury",
-        "icon": "04d"
-    },
-    {
         "name": "Pozna\u0144",
         "temperature": "2.3",
         "humidity": "24",
@@ -34,5 +25,14 @@
         "description": "deszcz",
         "id": 1700406,
         "icon": "10d"
+    },
+    {
+        "name": "Warszawa",
+        "temperature": "11",
+        "humidity": "66",
+        "wind": "4",
+        "description": "ca\u0142kowite zachmurzenie",
+        "id": 1604415,
+        "icon": "04d"
     }
 ]
