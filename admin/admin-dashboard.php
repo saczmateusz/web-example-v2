@@ -6,7 +6,9 @@ $cities = getCities();
 session_start();
 
 if (!isset($_SESSION['admin'])) {
-    die("<h1>Brak uprawnień</h1>");
+    header('Location: admin-login.php');
+    die();
+    // die("<h1>Brak uprawnień</h1>");
 }
 
 if (isset($_POST['logout'])) {
@@ -41,8 +43,8 @@ if (isset($_POST['logout'])) {
   </header>
 
   <div class="content message-div dashboard-msg">
-      <h1 class="message">Zalecany widok horyzontalny</h1>
-    </div>
+    <h1 class="message">Zalecany widok horyzontalny, min. 700px szerokości</h1>
+  </div>
 
   <div class="content container dashboard">
     <p>

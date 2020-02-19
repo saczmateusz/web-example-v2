@@ -69,19 +69,23 @@ function validateCity($city, &$errors)
 
     if (!$city['name']) {
         $isValid = false;
-        $errors['name'] = 'Name is mandatory';
+        $errors['name'] = 'Nazwa jest wymagana';
     }
     if (!$city['temperature'] || !filter_var($city['temperature'], FILTER_VALIDATE_FLOAT)) {
         $isValid = false;
-        $errors['temperature'] = 'This must be a valid temperature';
+        $errors['temperature'] = 'Temperatura musi być liczbą';
     }
     if (!$city['humidity'] || !filter_var($city['humidity'], FILTER_VALIDATE_INT)) {
         $isValid = false;
-        $errors['humidity'] = 'This must be a valid humidity';
+        $errors['humidity'] = 'Wilgotność musi być liczbą';
     }
     if (!$city['wind'] || !filter_var($city['wind'], FILTER_VALIDATE_FLOAT)) {
         $isValid = false;
-        $errors['wind'] = 'This must be a valid wind';
+        $errors['wind'] = 'Wiatr musi być liczbą';
+    }
+    if (!$city['description']) {
+        $isValid = false;
+        $errors['description'] = 'Opis jest wymagany';
     }
 
     return $isValid;
