@@ -76,6 +76,7 @@ footer {
   border: none;
   display: inline-block;
   padding: 5px 16px;
+  height: 31px;
   vertical-align: middle;
   overflow: hidden;
   text-decoration: none;
@@ -231,7 +232,7 @@ i:hover {
   color: #17a2b8;
   border: 1px solid transparent;
   border-color: #17a2b8;
-  padding: 2px 8px;
+  /* padding: 2px 8px; */
   margin: 2px 0px;
   background-color: #ffffff;
 }
@@ -244,7 +245,7 @@ i:hover {
   color: #6c757d;
   border: 1px solid transparent;
   border-color: #6c757d;
-  padding: 2px 8px;
+  /* padding: 2px 8px; */
   margin: 2px 0px;
   background-color: #ffffff;
 }
@@ -253,11 +254,21 @@ i:hover {
   background-color: #6c757d;
   border-color: #6c757d;
 }
+.edit {
+  color: #fff;
+  background-color: #6c757d;
+  border-color: #6c757d;
+}
+.edit:hover {
+  color: #fff;
+  background-color: #545b62;
+  border-color: #4e555b;
+}
 .outline-delete {
   color: #dc3545;
   border: 1px solid transparent;
   border-color: #dc3545;
-  padding: 2px 8px;
+  /* padding: 2px 8px; */
   margin: 2px 0px;
   text-decoration: none;
   min-height: 28px;
@@ -269,6 +280,16 @@ i:hover {
   background-color: #dc3545;
   border-color: #dc3545;
 }
+.delete {
+  color: #fff;
+  background-color: #dc3545;
+  border-color: #dc3545;
+}
+.delete:hover {
+  color: #fff;
+  background-color: #bd2130;
+  border-color: #b21f2d;
+}
 a.button {
   text-decoration: none;
   min-width: 60px;
@@ -276,7 +297,7 @@ a.button {
 .view {
   border: 1px solid transparent;
   border-color: #17a2b8;
-  padding: 2px 8px;
+  /* padding: 2px 8px; */
   margin: 2px 0px;
   color: #fff;
   background-color: #17a2b8;
@@ -352,7 +373,8 @@ td.buttons {
 }
 .card-header h3 {
   font-size: 26px;
-  margin-bottom: 0.5rem;
+  margin-block-start: 26px;
+  margin-bottom: 7.5px;
   font-weight: 500;
   line-height: 1.2;
 }
@@ -397,4 +419,18 @@ label {
   margin: 0px;
   border: none;
   min-height: 27px;
+}
+.back {
+  display: flex;
+  justify-content: space-around;
+  padding: 15px;
+}
+.card-header {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+.view-buttons {
+  margin-block-start: 26px;
+  margin-bottom: 7.5px;
 }

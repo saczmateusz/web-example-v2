@@ -6,7 +6,6 @@ $msg = '';
 if (isset($_SESSION['admin'])) {
     header('Location: admin-dashboard.php');
     die();
-    // die("Administrator jest już zalogowany");
 }
 
 if (isset($_POST['submit'])) {
