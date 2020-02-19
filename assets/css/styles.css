@@ -434,3 +434,14 @@ label {
   margin-block-start: 26px;
   margin-bottom: 7.5px;
 }
+.dashboard-msg {
+  display: none;
+}
+@media (max-width: 699px) {
+  .dashboard {
+    display: none;
+  }
+  .dashboard-msg {
+    display: block;
+  }
+}

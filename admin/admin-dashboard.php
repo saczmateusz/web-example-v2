@@ -40,7 +40,11 @@ if (isset($_POST['logout'])) {
     </div>
   </header>
 
-  <div class="content container">
+  <div class="content message-div dashboard-msg">
+      <h1 class="message">Zalecany widok horyzontalny</h1>
+    </div>
+
+  <div class="content container dashboard">
     <p>
       <a class="button add" href="../crud/create.php">Dodaj nowe miasto</a>
     </p>
