@@ -180,6 +180,11 @@ footer {
   top: -40px;
   right: 8px;
 }
+.admin-button {
+  position: absolute;
+  top: -40px;
+  left: 8px;
+}
 .hidden-template {
   display: none;
 }
