@@ -47,10 +47,10 @@ if (isset($_POST['submit'])) {
       <form action="" enctype="multipart/form-data" method="POST">
         <div class="form-group">
           <label for="login">Login</label>
-          <input type="text" name="login" class="form-control <?php echo $msg ? 'is-invalid' : ''; ?>">
+          <input type="text" name="login" class="form-control">
           <div class="form-group">
             <label for="password">Hasło</label>
-            <input type="password" name="password" class="form-control <?php echo $msg ? 'is-invalid' : ''; ?>">
+            <input type="password" name="password" class="form-control">
             <?php if ($msg): ?>
             <div class="invalid-feedback"><?php echo $msg; ?></div>
             <?php endif;?>
