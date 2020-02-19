@@ -92,12 +92,12 @@ footer {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .red-button {
-  background-color: #be4646;
+  background-color: #dc3545;
   height: 31px;
   float: right;
 }
 .red-button:hover {
-  background-color: #812e2e;
+  background-color: #bd2130;
 }
 .header-form {
   position: relative;
@@ -293,6 +293,7 @@ i:hover {
 a.button {
   text-decoration: none;
   min-width: 60px;
+  cursor: pointer;
 }
 .view {
   border: 1px solid transparent;
@@ -405,7 +406,7 @@ label {
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 .invalid-feedback {
-  display: none;
+  display: block;
   width: 100%;
   margin-top: 0.25rem;
   font-size: 80%;
@@ -447,4 +448,14 @@ label {
 }
 .container img {
   filter: brightness(90%);
+}
+.animate-right a {
+  margin-top: 10px;
+}
+.login-card {
+  padding: 60px 25px;
+}
+.submit-login {
+  display: flex;
+  justify-content: space-around;
 }
