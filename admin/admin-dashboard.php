@@ -3,8 +3,6 @@ require '../cities/cities.php';
 
 $cities = getCities();
 
-include '../crud/components/header.php';
-
 session_start();
 
 if (!isset($_SESSION['admin'])) {
@@ -25,8 +23,6 @@ if (isset($_POST['logout'])) {
   <title>Pogoda</title>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="shortcut icon" type="image/png" href="../assets/img/favicon.png" />
   <link rel="stylesheet" href="../assets/css/styles.css" />
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" />
@@ -46,7 +42,7 @@ if (isset($_POST['logout'])) {
 
   <div class="content container">
     <p>
-      <a class="btn btn-success" href="../crud/create.php">Dodaj nowe miasto</a>
+      <a class="button add" href="../crud/create.php">Dodaj nowe miasto</a>
     </p>
 
     <table class="table">
@@ -72,13 +68,12 @@ if (isset($_POST['logout'])) {
             <img style="width: 60px" src="<?php echo "http://openweathermap.org/img/wn/" . $city['icon'] . "@2x.png" ?>"
               alt="pogoda">
           </td>
-          <td>
-            <a href="../crud/view.php?id=<?php echo $city['id'] ?>" class="btn btn-sm btn-outline-info">Zobacz</a>
-            <a href="../crud/update.php?id=<?php echo $city['id'] ?>"
-              class="btn btn-sm btn-outline-secondary">Edytuj</a>
+          <td class="buttons">
+            <a href="../crud/view.php?id=<?php echo $city['id'] ?>" class="button outline-view">Info</a>
+            <a href="../crud/update.php?id=<?php echo $city['id'] ?>" class="button outline-edit">Edytuj</a>
             <form method="POST" action="../crud/delete.php">
               <input type="hidden" name="id" value="<?php echo $city['id'] ?>">
-              <button class="btn btn-sm btn-outline-danger">Usuń</button>
+              <button class="button outline-delete">Usuń</button>
             </form>
           </td>
         </tr>
