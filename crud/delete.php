@@ -1,10 +1,9 @@
 <?php
-include 'components/header.php';
 require '../cities/cities.php';
 
 if (!isset($_POST['id'])) {
-    include "components/not_found.php";
-    exit;
+    echo "<a href='../admin/admin-dashboard.php' class='button view'>Wróć</a><br>";
+    die("Błędne ID miasta");
 }
 $cityId = $_POST['id'];
 deleteCity($cityId);
