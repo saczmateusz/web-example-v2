@@ -21,12 +21,16 @@
         <form class="searchbar" id="cityform">
           <input
             class="form-input"
-            type="text"
+            list="listcities"
             id="city"
             placeholder="Wyszukaj miasto"
           />
+          <datalist id="listcities">
+            <option value="Rzeszów"> </option>
+          </datalist>
+
           <button class="form-submit button" type="submit">
-            DODAJ
+            Dodaj
           </button>
         </form>
       </div>
@@ -59,7 +63,7 @@
     <footer>
       <div class="admin-button">
         <a class="button view" href="./admin/admin-login.php">
-          ADMIN
+          Admin
         </a>
       </div>
       <p>
@@ -67,7 +71,7 @@
       </p>
       <div class="clear">
         <button class="button red-button" onclick="clearLocalStorage()">
-          WYCZYŚĆ
+          Wyczyść
         </button>
       </div>
     </footer>

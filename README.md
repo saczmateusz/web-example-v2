@@ -1,3 +1,3 @@
-Weather web page that shows data from OpenWeatherMap API
+Weather web page that uses mock data from json database.
 
-Available [here](https://saczmateusz.github.io/web-example/).
+Database is managed by CRUD developed in PHP.
