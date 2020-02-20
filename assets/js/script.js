@@ -10,22 +10,17 @@ const loading = document.querySelector('.loading');
 
 window.onload = initialize;
 
-function loadJSON() {
+function initialize() {
   var xobj = new XMLHttpRequest();
   xobj.open('GET', './cities/cities.json', true);
   xobj.onreadystatechange = function() {
     if (xobj.readyState == 4 && xobj.status == '200') {
       database = JSON.parse(xobj.responseText);
       console.log(database);
-      loadLocalStorageV2();
+      loadLocalStorage();
     }
   };
   xobj.send(null);
-}
-
-function initialize() {
-  // loadLocalStorageV2();
-  loadJSON();
 }
 
 // function loadLocalStorage() {
@@ -46,7 +41,7 @@ function initialize() {
 //   }
 // }
 
-function loadLocalStorageV2() {
+function loadLocalStorage() {
   if (localStorage.getItem('cities')) {
     cities = JSON.parse(localStorage.getItem('cities'));
 
@@ -57,7 +52,13 @@ function loadLocalStorageV2() {
     //       addNewCityToList(city);
     //     }),
     //   );
-    cities.map(city => addNewCityToList(city));
+    cities.map(city => {
+      updateWeather(city.name);
+      console.log('update -> addnew');
+      addNewCityToList(city);
+    });
+
+    // cities.map(city => addNewCityToList(city));
     document.querySelector('.message').innerHTML = 'Dodane miasta:';
   }
   return cities;
@@ -67,16 +68,24 @@ function loadWeatherForLocalStorage(idList) {
   return getWeatherGroupOfIds(idList);
 }
 
-function updateCitiesData(data) {
-  data.list.map((element, index) => {
-    cities[index].temperature = element.main.temp;
-    cities[index].humidity = element.main.humidity;
-    cities[index].wind = element.wind.speed;
-    cities[index].description = element.weather[0].description;
-    cities[index].icon = element.weather[0].icon;
-  });
+function updateWeather(cityname) {
+  var city = database.find(element => element.name === cityname);
+  console.log(cityname);
+  console.log(city);
+  updateCitiesData(city);
+}
+
+function updateCitiesData(city) {
+  var index = cities.findIndex(element => element.name === city.name);
+  console.log('update');
+  cities[index].temperature = city.temperature;
+  cities[index].humidity = city.humidity;
+  cities[index].wind = city.speed;
+  cities[index].description = city.description;
+  cities[index].icon = city.icon;
+
   localStorage.setItem('cities', JSON.stringify(cities));
-  return cities;
+  // return cities;
 }
 
 // Get coordinates for argument city
@@ -92,7 +101,7 @@ function updateCitiesData(data) {
 // }
 
 // Get current weather data for argument coordinates
-function getWeatherV2(cityname) {
+function getWeather(cityname) {
   var city = database.find(element => element.name === cityname);
   console.log(cityname);
   console.log(city);
@@ -142,7 +151,7 @@ form.addEventListener('submit', event => {
   // If given city is not an empty string, get data for the closest station
   if (city !== '') {
     loading.style.display = 'flex';
-    getWeatherV2(city);
+    getWeather(city);
   } else alert('Formularz nie może być pusty');
 
   // Clear form input
@@ -152,7 +161,7 @@ form.addEventListener('submit', event => {
 // Generate panel with weather data and add it to html body
 function addNewCityToList(data) {
   var template = document.getElementById('template').cloneNode('true');
-
+  console.log('draw panel');
   template.id = data.id;
   template.querySelector('.cityid').id = data.id;
   template.querySelector('.city').innerHTML = data.name;
@@ -169,6 +178,7 @@ function addNewCityToList(data) {
 }
 
 function addToLocalStorage(data) {
+  console.log('add to local storage function');
   var city = {
     id: data.id,
     name: data.name,
