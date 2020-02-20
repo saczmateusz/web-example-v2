@@ -24,7 +24,7 @@ function loadJSON() {
 }
 
 function initialize() {
-  loadLocalStorageV2();
+  // loadLocalStorageV2();
   loadJSON();
 }
 
