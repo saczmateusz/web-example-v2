@@ -2,15 +2,15 @@
 require '../cities/cities.php';
 
 if (!isset($_GET['id'])) {
-    include "components/not_found.php";
-    exit;
+    echo "<a href='../admin/admin-dashboard.php' class='button view'>Wróć</a><br>";
+    die("Błędne ID miasta");
 }
 $cityId = $_GET['id'];
 
 $city = getCityById($cityId);
 if (!$city) {
-    include "components/not_found.php";
-    exit;
+    echo "<a href='../admin/admin-dashboard.php' class='button view'>Wróć</a><br>";
+    die("Błędne ID miasta");
 }
 
 $errors = [

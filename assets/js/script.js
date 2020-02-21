@@ -49,7 +49,7 @@ function updateCitiesData(city) {
   var index = cities.findIndex(element => element.name === city.name);
   cities[index].temperature = city.temperature;
   cities[index].humidity = city.humidity;
-  cities[index].wind = city.speed;
+  cities[index].wind = city.wind;
   cities[index].description = city.description;
   cities[index].icon = city.icon;
 

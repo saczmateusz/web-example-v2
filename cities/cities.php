@@ -110,5 +110,7 @@ function addIcon($description)
             return "50d";
         case "burza z piorunami":
             return "11d";
+        default:
+            return "02d";
     }
 }
